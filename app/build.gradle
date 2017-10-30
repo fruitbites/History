@@ -1,0 +1,138 @@
+apply plugin: "com.android.application"
+apply plugin: 'me.tatarka.retrolambda'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.soundbread.history"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+repositories {
+    jcenter()
+}
+
+
+
+ext {
+    SUPPORT_LIBRARY_VERSION = "26.+"
+    CONSTRAINT_LAYOUT_VERSION = "1.0.2"
+    FIREBASE_VERSION = "11.2.0"
+    PLAY_SERVICE_VERSION = "11.2.0"
+
+    DAGGER_VERSION = "2.9"
+    GLASSFISH_JAVAX_ANNOTATION = "10.0-b28"
+    GSON_VERSION = "2.6.2"
+    BUTTERKNIFE_VERSION = "8.5.1"
+    RXJAVA_VERSION = "2.1.1"
+    RXANDROID_VERSION = "2.0.1"
+
+
+    GLIDE_VERSION = "3.7.0"
+    TIMBER_VERSION = "3.1.0"
+    CAT_LOADING_VERSION = "1.0.1"
+    OKHTTP_VERSION = "3.0.1"
+    SWIPEMENU_RECYCLERVIEW_VERSION = "4.0.4"
+    SWEET_ALERT_VERSION = "1.3"
+    CLANS_FAB_VERSION = "1.6.4"
+    JUNIT_VERSION = "4.12"
+
+    PARCER_API_VERSION = "1.1.6"
+
+    RETROFIT_VERSION = "2.3.0"
+
+    RETROLAMBDA_VERSION ="3.7.0"
+
+    EVENTBUS_VERSION="3.0.0"
+
+}
+
+dependencies {
+    compile fileTree(dir: "libs", include: ["*.jar"])
+    androidTestCompile("com.android.support.test.espresso:espresso-core:2.2.2", {
+        exclude group: "com.android.support", module: "support-annotations"
+    })
+    compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:design:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support.constraint:constraint-layout:${CONSTRAINT_LAYOUT_VERSION}"
+    compile "com.android.support:recyclerview-v7:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:cardview-v7:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:palette-v7:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:support-annotations:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:support-v4:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:support-v13:${SUPPORT_LIBRARY_VERSION}"
+
+
+
+    //region Dagger2
+    def daggerCompiler = "com.google.dagger:dagger-compiler:${DAGGER_VERSION}"
+    annotationProcessor daggerCompiler
+
+    compile "com.google.dagger:dagger:${DAGGER_VERSION}"
+    provided "javax.annotation:jsr250-api:1.0"
+    provided "org.glassfish:javax.annotation:${GLASSFISH_JAVAX_ANNOTATION}"
+
+    // ButterKnife - required by Dagger2
+    compile("com.jakewharton:butterknife:${BUTTERKNIFE_VERSION}") {
+        exclude module: "support-annotations"
+    }
+    annotationProcessor "com.jakewharton:butterknife-compiler:${BUTTERKNIFE_VERSION}"
+
+
+
+    // RxJava, RxAndroid
+    compile "io.reactivex.rxjava2:rxandroid:${RXANDROID_VERSION}"
+    compile "io.reactivex.rxjava2:rxjava:${RXJAVA_VERSION}"
+
+
+    // Retrofit2
+    compile "com.squareup.retrofit2:retrofit:${RETROFIT_VERSION}"
+    compile "com.squareup.retrofit2:converter-gson:${RETROFIT_VERSION}"
+    compile "com.squareup.retrofit2:adapter-rxjava2:${RETROFIT_VERSION}"
+
+    //Firebase
+    compile "com.google.firebase:firebase-core:${FIREBASE_VERSION}"
+    compile "com.google.firebase:firebase-ads:${FIREBASE_VERSION}"
+    compile "com.google.firebase:firebase-analytics:${FIREBASE_VERSION}"
+    compile "com.google.firebase:firebase-crash:${FIREBASE_VERSION}"
+
+    // Play Services
+    compile "com.google.android.gms:play-services-analytics:${PLAY_SERVICE_VERSION}"
+    // GSON
+    compile "com.google.code.gson:gson:${GSON_VERSION}"
+
+    // EventBus
+    compile "org.greenrobot:eventbus:${EVENTBUS_VERSION}"
+
+
+    // Parceler
+    compile "org.parceler:parceler-api:${PARCER_API_VERSION}"
+    annotationProcessor "org.parceler:parceler:${PARCER_API_VERSION}"
+
+    compile "com.jakewharton.timber:timber:${TIMBER_VERSION}"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:${OKHTTP_VERSION}"
+    compile "com.squareup.okhttp3:okhttp:${OKHTTP_VERSION}"
+    compile "com.tubb.smrv:swipemenu-recyclerview:${SWIPEMENU_RECYCLERVIEW_VERSION}"
+    compile "cn.pedant.sweetalert:library:${SWEET_ALERT_VERSION}"
+    compile "com.github.clans:fab:${CLANS_FAB_VERSION}"
+    compile "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
+    compile "com.readystatesoftware.sqliteasset:sqliteassethelper:+"
+
+    testCompile "junit:junit:${JUNIT_VERSION}"
+}
+
+apply plugin: "com.google.gms.google-services"

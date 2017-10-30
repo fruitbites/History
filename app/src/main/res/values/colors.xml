@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#27B2D8</color>
+    <color name="colorPrimaryDark">#15A0C0</color>
+    <color name="colorAccent">#D080D0</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#DBDBDB</color>
+    <color name="text">#333333</color>
+    <color name="person">#81D6EC</color>
+    <color name="remains">#A2D256</color>
+    <color name="event">#E78DDE</color>
+    <color name="organization">#DDE262</color>
+
+    <color name="background">#F2F2F2</color>
+</resources>

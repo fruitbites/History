@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">손안에한국사</string>
+
+    <string name="menu_search">검색</string>
+    <string name="menu_bookmark">즐겨찾기</string>
+
+    <string name="search_hint">띄어쓰기 하면 더 잘찾아요</string>
+</resources>

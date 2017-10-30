@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+>
+
+    <LinearLayout
+        android:id="@+id/chronicle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment android:name="com.soundbread.history.fragment.ChronicleFragment"
+            android:id="@+id/chronicle_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:gravity="center_vertical"
+            style="@style/Search"
+            android:id="@+id/result_layout">
+
+            <TextView
+                android:layout_width="0dp"
+                android:paddingLeft="10dp"
+                android:layout_height="match_parent"
+                android:id="@+id/query_result"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                style="@style/Search.Item.Text" />
+
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/Search.RecyclerView" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

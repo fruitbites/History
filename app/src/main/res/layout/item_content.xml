@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="머리말"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark" />
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/text"
+        android:textSize="18sp"
+        android:lineSpacingExtra="8sp"
+        android:text="조선왕조 개창과 함께 수도 한양에 처음 새로 지어진 이래 조선 전기 주요 궁궐로 쓰이던 경복궁은 임진왜란 때 완전히 불탄 이후 폐허로 남아 있다가 고종 대에 중건되었다. 일제 강점기에 훼손되었던 경복궁은 1990년대 이후 복원 공사를 통하여 고종대 궁궐의 모습을 재현하고 있다. " />
+</LinearLayout>

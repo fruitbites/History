@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/text"
+            android:gravity="left|center_vertical"
+            android:padding="5dp"
+            android:text="경복궁 (경복궁)"
+            android:textColor="@color/white"
+            android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/subname"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="경복궁 [景福宮]"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textColor="@color/text"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text="조선 왕조의 법궁(法宮)" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_light_normal" />
+
+        <TextView
+            android:id="@+id/birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/red_btn_bg_pressed_color"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            android:text="생몰년" />
+
+        <TextView
+            android:id="@+id/period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/blue_btn_bg_pressed_color"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+
+            android:text="시기" />
+
+        <TextView
+            android:id="@+id/alias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/gray_btn_bg_pressed_color"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            android:text="이칭" />
+
+    </LinearLayout>
+
+</LinearLayout>
